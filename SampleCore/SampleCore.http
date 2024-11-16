@@ -1,0 +1,61 @@
+@SampleCore_HostAddress = http://localhost:5236
+
+###
+
+GET {{SampleCore_HostAddress}}/session
+
+###
+
+GET {{SampleCore_HostAddress}}/dummy.asp?pid=0
+Accept: text/plain
+
+###
+
+GET {{SampleCore_HostAddress}}/dummy.asp?pid=0&data=AAAAABAAAAAAAAAA&hash=abc
+Accept: text/plain
+
+###
+
+GET {{SampleCore_HostAddress}}/tetrisds/store.asp?pid=0
+Accept: text/plain
+
+###
+GET {{SampleCore_HostAddress}}/session/tetrisds
+
+###
+@Hash1 = f49adbbc823cf296d3c38217b797f6dae3c54530
+
+GET {{SampleCore_HostAddress}}/tetrisds/store.asp?pid=0&data=AAAAAAAAAAAAAAAA&hash={{Hash1}}&name=QgBvAEIA&region=EU
+Accept: text/plain
+
+###
+
+GET {{SampleCore_HostAddress}}/pokedungeonds/web/common/setProfile.asp?pid=0
+Accept: text/plain
+
+###
+GET {{SampleCore_HostAddress}}/session/pokedungeonds
+###
+@Hash2 = 29949f880588fe8616a240f2b35f863d707e3888
+
+GET {{SampleCore_HostAddress}}/pokedungeonds/web/common/setProfile.asp?pid=0&hash={{Hash2}}&data=YTxJZAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Accept: text/html
+
+###
+
+GET {{SampleCore_HostAddress}}/pokedngnwii/web/common/setProfile.asp?pid=0
+Accept: text/plain
+
+###
+GET {{SampleCore_HostAddress}}/session/pokedngnwii
+
+###
+@Hash3 = 9b09ef5ae88e0a2e5a1768133ffafafadd651344
+
+GET {{SampleCore_HostAddress}}/pokedngnwii/web/common/setProfile.asp?pid=0&hash={{Hash3}}&data=IFVjVgAAAAAAAAAAAAAAAAAAAAAAAAAA
+Accept: text/html
+
+###
+
+GET {{SampleCore_HostAddress}}/pokedngnwii/web/rescue/rescueCheck.asp?pid=0&hash={{Hash3}}&data=IFVjVgAAAAAAAAAAAAAAAAAAAAAAAAAA
+Accept: text/html
